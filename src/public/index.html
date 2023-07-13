@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sockets Crud</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-md-4 my-auto">
+          <form id="noteForm" class="card card-body rounded-0">
+            <input
+              id="title"
+              type="text"
+              class="form-control rounded-0 mb-3"
+              placeholder="write your title"
+              autofocus
+            />
+            <textarea
+              id="description"
+              rows="3"
+              class="form-control rounded-0 mb-3"
+              placeholder="write a description"
+            ></textarea>
+            <button class="btn btn-dark rounded-0">Send</button>
+          </form>
+        </div>
+        <div class="col-md-8" id="notes"></div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
